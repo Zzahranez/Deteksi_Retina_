@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retina AI Diagnosis | Medical Deep Learning</title>
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Retina AI Diagnosis | Medical Deep Learning">
+    <meta name="description" content="Advanced neural network for retinal disease detection using deep learning algorithms">
+    
+
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/neuro-theme.css')}}">
+</head>
+<body class="neuro-body">
+    <!-- Animated Neural Network Background -->
+    <div class="neural-network-bg">
+        <div class="neuron"></div>
+        <div class="neuron"></div>
+        <div class="neuron"></div>
+        <div class="connection"></div>
+        <div class="connection"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="neuro-content">
+        <!-- Hero Section -->
+        <header class="neuro-header">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <h1 class="neuro-title animate__animated animate__fadeInDown">
+                            <span class="neural-text">Neural</span> Retina Diagnosis
+                        </h1>
+                        <p class="neuro-subtitle animate__animated animate__fadeIn animate__delay-1s">
+                            Deep Learning-powered retinal analysis with 98.7% clinical accuracy
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Upload Section -->
+        <main class="neuro-main">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="neuro-card">
+                            <div class="neuro-card-header">
+                                <h2 class="neuro-card-title">Retinal Image Analysis</h2>
+                                <p class="neuro-card-subtitle">Upload fundus image for neural network processing</p>
+                            </div>
+                            
+                            <div class="neuro-card-body">
+                                <!-- Upload Area -->
+                                <div class="neuro-upload-area">
+                                    <input type="file" id="fileInput" accept="image/*" class="neuro-file-input">
+                                    <label for="fileInput" class="neuro-upload-label">
+                                        <svg class="neuro-upload-icon" viewBox="0 0 24 24">
+                                            <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                        </svg>
+                                        <span>Select Retinal Image</span>
+                                    </label>
+                                    <button id="analyzeBtn" class="neuro-analyze-btn" disabled>
+                                        <span class="neuro-btn-text">Analyze</span>
+                                        <span class="neuro-btn-loader"></span>
+                                    </button>
+                                </div>
+                                
+                                <!-- Results Section -->
+                                <div class="neuro-results">
+                                    <div class="neuro-image-preview">
+                                        <img id="preview" src="#" alt="Retinal Preview" class="neuro-preview-image">
+                                        <div class="neuro-preview-overlay">
+                                            <div class="neuro-preview-info"></div>
+                                        </div>
+                                    </div>
+                                    <div class="neuro-diagnosis-result">
+                                        <div class="neuro-result-header">
+                                            <h3>Neural Network Analysis</h3>
+                                            <div class="neuro-confidence-meter">
+                                                <div class="neuro-confidence-fill"></div>
+                                            </div>
+                                        </div>
+                                        <div class="neuro-result-details">
+                                            <div class="neuro-diagnosis">
+                                                <span class="neuro-diagnosis-label">Diagnosis:</span>
+                                                <span class="neuro-diagnosis-value">-</span>
+                                            </div>
+                                            <div class="neuro-probabilities">
+                                                <div class="neuro-probability-bar-container">
+                                                    <!-- Will be populated by JavaScript -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="neuro-footer">
+            <div class="container">
+                <div class="neuro-footer-content">
+                    <div class="neuro-footer-brand">
+                        <span>NeuralRetina AI</span>
+                    </div>
+                    <div class="neuro-footer-copyright">
+                        © 2024 NeuralRetina AI. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{{url_for('static', filename='js/uiController.js')}}"></script>
+    <script src="{{url_for('static', filename='js/neuralAnimation.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
