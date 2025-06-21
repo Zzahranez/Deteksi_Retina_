@@ -50,30 +50,8 @@ class UIController {
         reader.readAsDataURL(file);
     }
 
-    analyzeImage() {
-        if (!this.fileInput.files[0]) {
-            this.showError('Please select an image first');
-            return;
-        }
+   
 
-        this.showLoading(true);
-
-        // Simulate API call
-        setTimeout(() => {
-            this.showLoading(false);
-            this.displayResults({
-                diagnosis: "Diabetic Retinopathy",
-                confidence: 0.92,
-                probabilities: [
-                    { condition: "Normal", probability: 0.05 },
-                    { condition: "Mild DR", probability: 0.12 },
-                    { condition: "Moderate DR", probability: 0.23 },
-                    { condition: "Severe DR", probability: 0.92 },
-                    { condition: "Proliferative DR", probability: 0.08 }
-                ]
-            });
-        }, 2000);
-    }
 
     showLoading(show) {
         const loader = this.analyzeBtn.querySelector('.neuro-btn-loader');

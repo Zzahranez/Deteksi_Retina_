@@ -8,7 +8,11 @@ app = Flask(__name__)
 
 model = tf.keras.models.load_model(r"D:\Data Sains dan Analitis\Pertemuan 16 Project Akhir\Deteksi_retina\retina_v2.h5")
 
-class_labels = ['Retina Normal', 'Retinopathy Retina',]  # Sesuaikan dengan 
+class_labels = ['Retina Normal', 'Retinopathy Retina',] 
+
+@app.route("/")
+def index():
+    return render_template('deteksi.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -34,7 +38,6 @@ def predict():
         predicted_class = 'Retina tidak diketahui'
 
     print("Kelas yang diprediksi:", predicted_class)
-    # Buat respons yang lebih terstruktur
     hasil_prediksi = {
         'diagnosis': predicted_class,
         'confidence': float(prediction[0][0]) 
