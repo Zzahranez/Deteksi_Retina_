@@ -21,8 +21,12 @@ Aplikasi ini digunakan untuk mendeteksi kondisi retina berdasarkan gambar yang d
 ┣ 📄 retina_v2.h5
 ┣ 📄 README.md
 
+## Codingan Convolutional Neural Network 
+Retina_detection.ipynb
+Retina_retina.ipynb
+
 ## ==================================
-## =========CARA MENJALANKAN=========
+## ========= CARA MENJALANKAN =========
 ## ==================================
 
 ### 1. Install library yang dibutuhkan
